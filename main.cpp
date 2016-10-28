@@ -23,15 +23,15 @@ int main(int args, char **argv)
 	int ft_count, ft_count_next;
 	vertex_t src=0;
 
-	graph<long, long, int, vertex_t,index_t, dist_t>
+	graph<long, long, long, vertex_t,index_t, dist_t>
 	*ginst = new graph
-	<long, long, int, vertex_t, index_t, dist_t>
+	<long, long, long, vertex_t, index_t, dist_t>
 	(beg_file,csr_file,weight_file);
 	
 	index_t vert_count=ginst->vert_count;
 	index_t edge_count=ginst->edge_count;
 	index_t *beg_pos=ginst->beg_pos;
-	vertex_t *csr=ginst->csr;
+	vertex_t *csr=ginst->adj_list;
 	dist_t *weight=ginst->weight;
 
 	openmp_sssp

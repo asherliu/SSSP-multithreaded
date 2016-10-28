@@ -22,7 +22,7 @@ class graph
 {
 	public:
 		new_index_t *beg_pos;
-		new_vert_t *csr;
+		new_vert_t *adj_list;
 		new_weight_t *weight;
 		new_index_t vert_count;
 		new_index_t edge_count;
@@ -31,7 +31,7 @@ class graph
 		graph(){};
 		~graph(){};
 		graph(const char *beg_file, 
-				const char *csr_file,
+				const char *adj_list_file,
 				const char *weight_file);
 };
 #include <graph.hpp>

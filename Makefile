@@ -1,4 +1,4 @@
-exe = openmp_sssp_bfs_style
+exe = openmp_sssp_bfs_style.bin
 
 cc = "$(shell which g++)" 
 #flags = -I. -fopenmp -march=athlon64 -O3
